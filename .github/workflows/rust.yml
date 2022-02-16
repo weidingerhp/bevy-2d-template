@@ -17,6 +17,8 @@ jobs:
     steps:
     - name: install generate
       run: cargo install cargo-generate
+    - name: install build dependencies
+      run: sudo apt install -y libxcb-shape0-dev libxcb-xfixes0-dev libxcb1-dev libxkbcommon-dev libasound2-dev
     - name: create demo object
       run: cargo generate ${{ github.repository }} -b ${{ github.ref_name }} -n testgame -d window-title=default
     - name: Build
