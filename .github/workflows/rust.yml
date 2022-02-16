@@ -18,7 +18,7 @@ jobs:
     - name: install generate
       run: cargo install cargo-generate
     - name: create demo object
-      run: cargo generate ${{ github.repository }}@${{ github.sha }} -n testgame -d window-title=default
+      run: cargo generate ${{ github.repository }} -b ${{ github.ref_name }} -n testgame -d window-title=default
     - name: Build
       run: cargo build --verbose
       working-directory: testgame
