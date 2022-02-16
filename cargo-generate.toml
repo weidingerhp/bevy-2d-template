@@ -1,0 +1,11 @@
+[template]
+cargo_generate_version = ">=0.10.0"
+ignore = [
+    ".git",
+    ".github",
+    "README.md",
+]
+description1 = "Simple Bevy 2D Project"
+
+[placeholders]
+window-title = { type="string", prompt="Window Title", default="My simple Game"}
